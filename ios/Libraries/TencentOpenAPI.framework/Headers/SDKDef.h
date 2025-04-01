@@ -87,23 +87,23 @@ typedef enum
 /**
  * 错误提示语
  */
-@property (nonatomic, copy) NSString *errorMsg;
+@property (nonatomic, retain) NSString *errorMsg;
 
 /**
  * 服务器返回数据的json格式字典\n
  * 字典内具体参数的命名和含义请参考\ref api_spec
  */
-@property (nonatomic, copy) NSDictionary *jsonResponse;
+@property (nonatomic, retain) NSDictionary *jsonResponse;
 
 /**
  * 服务器返回的原始数据字符串
  */
-@property (nonatomic, copy) NSString *message;
+@property (nonatomic, retain) NSString *message;
 
 /**
  * 用户保留数据
  */
-@property (nonatomic, strong) id userData;
+@property (nonatomic, retain) id userData;
 
 @end
 
@@ -400,7 +400,7 @@ typedef id TCRequiredId;
 /**
  * API参数中的保留字段，可以塞入任意字典支持的类型，再调用完成后会带回给调用方
  */
-@property (nonatomic, strong) TCRequiredId paramUserData;
+@property (nonatomic, retain) TCRequiredId paramUserData;
 
 /**
  * APIResponse,API的返回结果
